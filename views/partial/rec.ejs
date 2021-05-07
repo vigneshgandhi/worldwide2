@@ -1,0 +1,24 @@
+    <div class="rickbrand">
+        <% posts1.forEach(function(post2){ %>
+            <div class="col-sm-4 col-md-4">
+                <div class="thumbnail">
+                   <img src="<%= post2.thumbnail %>" alt="logo" style="height:200px;width:100%;display:block">
+                    <div class="caption">   
+                        <h3 id="post"><%= post2.title %></h3>
+                        <p><%= post2.content %></p>
+                        <input type="hidden" name="filename" id="hidden" value="<%= post2.videos %> ">
+                        <a href="/videos/watches/<%= post2.title %>" class="btn btn-success">Watch</a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function playlist(){
+                    var files=[
+                        "<%= post2.videos %>"
+                    ];
+                    console.log(files);
+                }
+                playlist();
+            </script>
+        <% }); %>
+    </div>

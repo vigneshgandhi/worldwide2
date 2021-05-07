@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resellers.com</title>
+</head>
+<body style="background-image: linear-gradient( #e2d810, #d9138a, #12a4d9);">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <div class="navbar navbar-default navbar-static-top" role="navigation" id="nd">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="/" class="navbar-brand" id="nb">Resellers</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right" id="nvb">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+             
+                <% if (currentUser != null) { %>
+                        <li class="btn btn-default dropdown-toggle" type="list" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <a href="#">welcome<%= currentUser.username %><span class="caret"></span></a> 
+                        </li>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                          <li><a href="/profile">profile</a></li>
+                          <li><a href="/videos">watch / upload videos</a></li>
+                          <li><a href="https://web.whatsapp.com/" >Chat through whatsapp</a></li>
+                          <li><a href="/logout">Logout</a></li>    
+                        </ul>
+                <% } %>
+                <% if (currentUser == null) { %>
+                    <li><a href="/login" >Login</a></li>
+                    <li><a href="/signup">Sign up</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+    <% if (error && error.length > 0) { %>
+        <div class="alert alert-danger" role="alert" data-dismiss="alert" aria-label="close">
+            <%= error %>
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> 
+        </div>
+    <% } %>
+    <% if (info && info.length >0) { %>
+        <div class="alert alert-success fade in"  role="alert" data-dismiss="alert" aria-label="close">
+            <%= info %>
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+    <% } %>
+    <style>
+        .dropdown-menu{
+            font-size: 25px;
+            font-weight: 600;
+            font-display: swap;
+            padding-top: 10px;
+            text-rendering: optimizeSpeed;
+            text-align: center;
+        }
+        *{
+            font-size: 20px;
+        }
+    </style>

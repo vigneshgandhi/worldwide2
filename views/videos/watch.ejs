@@ -1,0 +1,38 @@
+<%- include("../partial/header"); %>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <% posts.forEach(function(post){ %>
+        <div class="embed-responsive embed-responsive-16by9"> 
+            <!-- <video src="../../<%= post.videos %>" autoplay="true" controls="true" class="video" poster="<%= post.thumbnail %>" style="width: 65%; height: 600px;outline-style: none;"></video> -->
+            <video src="../../<%= post.videos %>" autoplay="" controls="" class="video" poster="<%= post.thumbnail %>"></video>
+
+        </div>
+        <div>
+            <!-- <iframe src="../../<%= post.videos %>" frameborder="0" class="i2v" id="i2v">less</iframe> -->
+            <p id="i2v">class</p>
+        </div>
+        <a href="/report-video" class="report" id="report">report</a>
+        <div class="title">
+            <h1><%= post.title %></h1>
+            <h2><%= post.content %></h2>
+        </div>
+        <script>
+            var file = "<%= post.videos %>";
+            console.log(file);
+            var ext=file.slice((file.lastIndexOf(".") - 1 >>> 0) + 2);
+            var mp4;
+            console.log(ext);
+            if(ext=='mp4'){
+                console.log("video file");
+                let a=document.getElementById(i2v);
+                a.innerText="videos only play here";
+            }
+            else{
+                console.log("just a ordinary file here");
+                window.location.href="../../<%= post.videos %>";
+            }
+        </script>
+    <% }) %>
+    <%- include("../partial/rec"); %>
+    <script src="../../JS/TLVD.js" defer></script>
+<%- include("../partial/footer"); %>  

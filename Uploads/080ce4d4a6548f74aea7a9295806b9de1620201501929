@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Sat Mar  6 13:40:05 2021 as: nmap -sC -sV -A -v -oN sharp sharp.htb
+Nmap scan report for sharp.htb (10.10.10.219) [host down]
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Mar  6 13:40:10 2021 -- 1 IP address (0 hosts up) scanned in 6.30 seconds

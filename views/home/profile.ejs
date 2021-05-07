@@ -1,0 +1,33 @@
+<%- include("../partial/header.ejs") %>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/styles4.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <h1>Users profile</h1>
+    <% users.forEach(function(user){ %>
+        <div class="jumbotron" width="75%">
+            <div class="form-group">
+                <label for="profilepic">Profile</label>
+                <br/>
+                <img src="<%= user.avatar %> " alt="profile pic" width="250" class="avatar">
+                <br/>
+            </div>   
+            <div class="form-group">
+                <label for="username">Username</label>
+                <br />
+                <input type="text" name="username" id="inputContent" value="<%= user.username %>">
+                <br/>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <br/>
+                <input type="email" name="email" id="inputContent" value="<%= user.email %>">
+            </div>
+            <div class="form-group">
+                <label for="mobile">mobile</label>
+                <br/>
+                <input type="number" name="mobile" id="inputContent" value="<%= user.mobile %>">
+            </div>
+        </div>
+        <% }) %>      
+<%- include("../partial/footer.ejs") %>  

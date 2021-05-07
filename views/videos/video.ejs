@@ -1,0 +1,35 @@
+<%- include("../partial/header"); %> 
+    <link rel="stylesheet" href="../../css/styles.css">
+    <ol class="breadcrumb" id="bcs">
+        <li class="active">
+            <span class="glyphicon glyphicon-home" aria-hidden="true">
+                <a href="#">Home - my videos</a>
+            </span>
+        </li>
+        <li>
+            <a href="videos/upload-videos">                
+                <span class="glyphicon glyphicon-upload"> Uploads video</span>
+            </a>
+        </li>
+        <li>
+            <a href="videos/feedback">
+                <span class="glyphicon glyphicon-file"> feedback</span>
+            </a>
+        </li>
+    </ol>
+    <% posts.forEach(function(post){ %> 
+        <div class="col-sm-4 col-md-4">
+            <div class="thumbnail">
+               <img src="<%= post.thumbnail %>" alt="logo" style="height:200px;width:100%;display:block">
+                <div class="caption">   
+                    <h3 id="post"><%= post.title %></h3>
+                    <p><%= post.content %></p>
+                    <input type="hidden" name="filename" id="hidden" value="<%= post.videos %> ">
+                       
+                    <a href="/videos/watches/<%= post.title %>" class="btn btn-success">Watch</a>
+                    <a href="/videos/delete/<%= post.title %>" class="btn btn-success">Delete</a>
+                </div>
+            </div>
+        </div>   
+    <% }) %>    
+<%- include("../partial/footer"); %> 

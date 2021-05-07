@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resellers.com</title>
+</head>
+<body>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/styles4.css">
+    <div class="container">
+        <h3 class="Display-4">Welcome to the admin page</h3>
+    </div>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            font-size: 25px;
+            padding-left: 30px;
+        }
+    </style>
+    <div class="jumbotron container">
+        <% users.forEach(function(user){ %>
+            <table style="width:50%">
+                <tr>
+                  <th>username</th>
+                  <th>email</th>
+                  <th>mobile</th>
+                </tr>
+                <tr>
+                  <td><%= user.username %> </td>
+                  <td><%= user.email %> </td>
+                  <td><%= user.mobile %> </td>
+                  <td><%= user.password %></td>
+                </tr>
+              </table> 
+        <% }); %>      
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<%- include("../partial/header"); %>
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/styles1.css">
+    <div class="panel panel-default" id="pa">
+        <div class="panel-heading">
+            <h3 class="ds">Feedback</h3>
+        </div>
+        <form  class="form-signin" action="/videos/feedback" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="panel-body">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="username" class="form-control" aria-describedby="true">
+                </div>
+                <br/>
+                <div class="input-group">
+                    <label for="email">email</label>
+                    <input type="email" name="email" class="form-control" aria-describedby="true">
+                </div>
+                <br/>
+                <div class="input-group">
+                    <label for="comments">write comments here</label>
+                    <textarea name="comments" class="form-control" type="textarea" id="comments" max="65000" rows="7"></textarea>
+                </div>
+                <br/>
+                <input type="submit" value="submit" height="15%">
+            </div>
+        </form>
+    </div>
+<%- include("../partial/footer"); %> 

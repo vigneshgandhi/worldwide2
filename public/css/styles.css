@@ -1,0 +1,103 @@
+#nd{
+  margin-top: 25px;
+  margin-right: 25px;
+  margin-left: 25px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  background-color: black;
+  /* color: blue; */
+  padding-left: 25px;
+  padding-right: 25px;
+}
+#nvb li a{
+  font-weight: 900;
+  font-size: 25px;
+  background-color: black;
+  color: #1e847f;
+}
+#nvb li a:hover{
+  font-weight: 900;
+  font-size: 25px;
+  background-color: white;
+  color: green;
+}
+body{
+  /* background-color: rgb(31, 128, 212); */
+  font-family: 'Dancing Script', cursive;
+  color: blue;
+  overflow-y: visible;
+  overflow-x: visible;
+}
+#vid1{
+    justify-content: center;
+    background-color: violet;
+    max-width: auto;
+    height:250px;
+}
+#nb{
+  color: brown;
+  font-size: 25px;
+  font-weight: 900;
+}
+.btn{
+  border: 1px solid black;
+  background-color: black;
+  font-size: 25px;
+  color: green;
+}
+.caption{
+  /* font: linear-gradient(#1e3d59, #f5f0e1, #ff6e40); */
+  background: linear-gradient(#d902ee, #ffd79d, #f162ff);
+  font-size: 25px;
+}
+h3,h1,h2{
+  color: blueviolet;
+}
+
+.dropdown-menu{
+  font-size: 25px;
+  font-weight: 600;
+  font-display: swap;
+  padding-top: 10px;
+  text-rendering: optimizeSpeed;
+  text-align: center;
+}
+.avatar{
+  border-radius: 50%;
+  height: 90px;
+}
+
+/* #file-upload{
+  width: 100%;
+  padding-bottom: 25px;
+} */
+input[type=submit]{
+  height: 45px;
+  width: 25%;
+  background-color: black;
+  color: chocolate;
+  margin-bottom: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+}
+/* input[type=file]{
+  
+} */
+.report{
+  margin-right: 10px;
+  position: fixed;
+  font-size: 25px;
+  padding: 30px 25px;
+  padding-bottom: 15px;
+  background-color: black;
+  color: coral;
+}
+#se{
+  width: 75%;
+  justify-content: center;
+  position: absolute;
+}
+.caption p.coc{
+  font-size: 35px;
+  font: #e75874;
+}

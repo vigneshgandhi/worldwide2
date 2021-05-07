@@ -1,0 +1,27 @@
+<%- include("../partial/header"); %>
+    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> 
+    <div class="jumbotron">
+        <form action="/videos/upload-videos" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" class="form-control" id="inputTitle" placeholder="title">
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <input type="text" name="content" id="inputContent" class="form-control" placeholder="Content">
+            </div>
+            <div class="form-group">
+                <label for="thumbnail">Thumbnail</label>
+                <input type="text" name="thumbnail" id="inputContent" class="form-control" placeholder="link">
+            </div>
+            <div class="form-group">
+                <input type="file" name="file" id="file" accept="video/*">
+                <input type="submit" value="submit">
+            </div>
+        </form>    
+    </div>
+    <script src="../../JS/post.js"></script>
+<%- include("../partial/footer"); %> 

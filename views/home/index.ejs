@@ -1,0 +1,28 @@
+<%- include("../partial/header.ejs"); %>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <h1>welcome to index page</h1>
+    <p>Welcome to our video streaming server</p>
+    <form action="/search/process" method="post">
+        <div id="search" class="fa fas-search">
+            <input type="text" class="form-control web-search-box" placeholder="search type title of video and press Enter " name="keyword" value='' id="se">
+            <input type="submit" value="send" style="height: 35px; padding-top: 25px; padding-bottom: 10px; ">
+        </div>
+    </form>
+    <% posts.forEach(function(post){ %>
+        <div class="col-sm-4 col-md-4">
+            <div class="thumbnail">
+                <img src="<%= post.thumbnail %>" alt="logo" style="height:200px;width:100%;display:block">
+                <div class="caption">   
+                    <h3 id="post" class="s"><%= post.title %></h3>
+                    <p id="coc" style="font-size: 35px; font-size: 25px;font: #e75874;"><%= post.content %></p>
+                    <input type="hidden" value="<%= post.userID %>"> 
+                    <input type="hidden" name="filename" id="hidden" value="<%= post.videos %>">
+                    <a href="/videos/watches/<%= post.title %>" class="btn btn-success" id="bcs" onclick>Watch/download files</a>
+                </div>
+            </div>
+        </div>
+    <% }) %>     
+<%- include("../partial/footer.ejs"); %>
